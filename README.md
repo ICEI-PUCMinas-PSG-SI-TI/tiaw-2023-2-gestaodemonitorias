@@ -8,8 +8,8 @@ O objetivo deste projeto é facilitar a conexão entre alunos que buscam aprimor
 * Gustavo lucas soares Barcelo
 * Gabriel Coimbra
 * Nathanael
-* Cairo
-* Bruno
+* Cairo Lacerda Rodrigues
+* Bruno Silvério Madureira
 
 ## Professores responsáveis
 
