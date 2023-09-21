@@ -1,16 +1,19 @@
-# Nome do projeto
-Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
+# Gestão de Monitorias
+O objetivo deste projeto é facilitar a conexão entre alunos que buscam aprimorar seus conhecimentos ensinando outros alunos que tenham dificuldades ou dúvidas em alguma matéria. A principio, focaremos em alunos da ICEI da PUC. Mas, o objetivo é abranger para que alunos de todos os cursos consigam se beneficiar destas monitorias. 
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Daniel de Oliveira Costa
+* Vinicius Tivo Soares
+* Gustavo lucas soares Barcelo
+* Gabriel Coimbra
+* Nathanael
+* Cairo
+* Bruno
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
+* Gabriel Barbosa Fonsceca
 * Nome completo do professor 2
 
 ## Instruções de utilização
