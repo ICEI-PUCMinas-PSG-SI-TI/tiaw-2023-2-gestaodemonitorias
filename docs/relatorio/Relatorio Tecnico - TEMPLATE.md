@@ -98,39 +98,29 @@ O Público alvo da nossa aplicação será todas pessoas em um ambiente escolar 
 
 # Especificações do Projeto
 
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Apresente uma visão geral do que será abordado nesta parte do
-> documento, enumerando as técnicas e/ou ferramentas utilizadas para
-> realizar a especificações do projeto
+1.Ferramenta do Trello para a divisão de trabalho
+2.Ferramenta Figma para o wireframe
+3.Técnica usada foi a metodologia Scrum
 
 ## Personas e Mapas de Empatia
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Maria, 20 anos
 
+Curso: Engenharia Civil
+Desafios: Maria está no segundo ano de Engenharia Civil e luta para acompanhar o ritmo das aulas avançadas de matemática e física. Ela precisa de ajuda extra para passar nas disciplinas essenciais e deseja encontrar tutores qualificados para orientá-la.
+Como posso ajudá-la: Site para monitoria
 
-> Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que 
-> você deve ser enumerar e descrever precisamente e de forma
-> personalizada todos os principais envolvidos com a solução almeja. 
-> 
-> Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina
-> e/ou nos seguintes links:
->
-> **Links Úteis**:
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Como fazer um mapa de empatia - Vídeo](https://www.youtube.com/watch?v=JlKHGpVoA2Y)
-> 
-> 
-> **Exemplo de Persona**
-> 
-> ![Exemplo de Persona](imaages/../images/persona.png)
-> 
-> Fonte: [Como criar uma persona para o seu negócio](https://raissaviegas.com.br/como-criar-uma-persona/)
+Rafael, 22 anos
 
+Curso: Administração
+Desafios: Rafael é um aluno ocupado que trabalha meio período para pagar suas despesas. Ele tem dificuldade em equilibrar trabalho, estudos e vida pessoal. Ele busca monitorias flexíveis que se adaptem ao seu horário apertado.
+Como posso ajudá-la: Site para monitoria
+
+André, 19 anos
+
+Curso: Ciência da Computação
+Desafios: André é um estudante introvertido que tem dificuldade em fazer perguntas em sala de aula. Ele procura um ambiente de aprendizado mais confortável, onde possa fazer perguntas sem hesitação e interagir com tutores que entendam suas necessidades
+Como posso ajudá-la: Site para monitoria
 
 ## Histórias de Usuários
 
@@ -138,60 +128,32 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+| Como um aluno  | desejo poder me registrar no aplicativo de monitoria|  para acessar os recursos e funcionalidades |
+| Como um aluno  | desejo poder visualizar um calendário               |  que mostre todas as monitorias disponíveis |
+| Como um aluno  | desejo poder me inscrever em monitorias             |  para participar delas                      |
+| Como um administrador  | desejo poder gerar relatórios               |  para manter um  controle                   |
+| Como um administrador  | desejo poder gerenciar monitores            |  para mudar de monitores                    |
 
-> Apresente aqui as histórias de usuário que são relevantes para o
-> projeto de sua solução. As Histórias de Usuário consistem em uma
-> ferramenta poderosa para a compreensão e elicitação dos requisitos
-> funcionais e não funcionais da sua aplicação. Se possível, agrupe as
-> histórias de usuário por contexto, para facilitar consultas
-> recorrentes à essa parte do documento.
->
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
 
 ## Requisitos
-
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
 
 ### Requisitos Funcionais
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
-
-
+|RF-001|Formulário de registro com campos para nome, e-mail, senha e informações de contato | ALTA | 
+|RF-002| Calendário interativo com datas e horários de monitorias marcados   | ALTA |
+|RF-003| Opção de filtrar monitorias por disciplina ou assunto   | ALTA |
+|RF-004| Capacidade de cancelar a inscrição   | MÉDIA |
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-> Com base nas Histórias de Usuário, enumere os requisitos da sua
-> solução. Classifique esses requisitos em dois grupos:
->
-> - [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
->   correspondem a uma funcionalidade que deve estar presente na
->   plataforma (ex: cadastro de usuário).
->
-> - [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
->   correspondem a uma característica técnica, seja de usabilidade,
->   desempenho, confiabilidade, segurança ou outro (ex: suporte a
->   dispositivos iOS e Android).
->
-> Lembre-se que cada requisito deve corresponder à uma e somente uma
-> característica alvo da sua solução. Além disso, certifique-se de que
-> todos os aspectos capturados nas Histórias de Usuário foram cobertos.
-> 
-> **Links Úteis**:
-> 
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
-
+|RNF-001| Painel de administração com opções para adicionar, editar e remover monitores | MÉDIA | 
+|RNF-002| Capacidade de atribuir monitores a disciplinas ou grupos de estudo |  BAIXA | 
+|RNF-003| Botão de inscrição visível em cada monitoria|  ALTA |
+|RNF-004| Confirmação de inscrição com lembrete por e-mail ou notificação push|  MÉDIA |
+|RNF-005| •Relatórios que mostrem métricas como número de inscrições, avaliações e participações em monitorias|  BAIXA |
 
 ## Restrições
 
@@ -241,88 +203,45 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Wireframes
 
-......  INCLUA AQUI OS WIREFRAMES DAS TELAS DA APLICAÇÃO COM UM BREVE DESCRITIVO ......
-
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a
-> estrutura de um site web e seu relacionamentos entre suas
-> páginas. Um wireframe web é uma ilustração semelhante ao
-> layout de elementos fundamentais na interface.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> 
-> **Exemplo**:
-> 
-> ![Exemplo de Wireframe](images/wireframe-example.png)
-
+ [Layout Wireframe](https://www.figma.com/file/STOfWOhxehC8RZllHS0BxV/PucToria?type=design&node-id=0-1&mode=design)
 
 # Metodologia
 
-......  COLOQUE AQUI O SEU TEXTO ......
+No desenvolvimento do nosso aplicativo de monitoria, adotaremos uma metodologia
+ágil chamada Scrum. O Scrum envolve a divisão do projeto em sprints de 2 a 4
+semanas, cada uma focada em tarefas priorizadas. Reuniões diárias chamadas de
+Daily Standup são realizadas para manter a equipe atualizada e promover a
+comunicação aberta. Essa abordagem visa garantir entregas regulares de valor e
+adaptabilidade às necessidades dos usuários no desenvolvimento do aplicativo de
+monitoria.
 
-> Nesta parte do documento, você deve apresentar a metodologia 
-> adotada pelo grupo, descrevendo o processo de trabalho baseado nas metodologias ágeis, 
-> a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a
-> gestão de configuração do projeto via GitHub.
->
-> Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido
-> pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar
-> o andamento do projeto, a execução das tarefas e o status de desenvolvimento
-> da solução.
-> 
-> **Links Úteis**:
-> - [Tutorial Trello](https://trello.com/b/8AygzjUA/tutorial-trello)
-> - [Gestão ágil de projetos com o Trello](https://www.youtube.com/watch?v=1o9BOMAKBRE)
-> - [Gerência de projetos - Trello com Scrum](https://www.youtube.com/watch?v=DHLA8X_ujwo)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+
+No desenvolvimento do nosso aplicativo de monitoria, adotaremos uma metodologia
+ágil chamada Scrum. O Scrum envolve a divisão do projeto em sprints de 2 a 4
+semanas, cada uma focada em tarefas priorizadas. Reuniões diárias chamadas de
+Daily Standup são realizadas para manter a equipe atualizada e promover a
+comunicação aberta. Essa abordagem visa garantir entregas regulares de valor e
+adaptabilidade às necessidades dos usuários no desenvolvimento do aplicativo de
+monitoria.
+
 
 ## Divisão de Papéis
 
-......  COLOQUE AQUI O SEU TEXTO ......
+Gustavo Barcelos - Dev
+Vinicius Tivo - Dev
+Gabriel Coimbra - Dev
+Daniel Costa - Dev
+Cairo Lacerda - Dev
+Bruno - Dev
+Nathanael - Dev
 
-> Apresente a divisão de papéis e tarefas entre os membros do grupo.
->
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
 
 
 ## Ferramentas
 
-......  COLOQUE AQUI O SEU TEXTO - SIGA O EXEMPLO DA TABELA ABAIXO  ......
-
-| Ambiente  | Plataforma              |Link de Acesso |
-|-----------|-------------------------|---------------|
-|Processo de Design Thinkgin  | Miro |  https://miro.com/XXXXXXX | 
-|Repositório de código | GitHub | https://github.com/XXXXXXX | 
-|Hospedagem do site | Heroku |  https://XXXXXXX.herokuapp.com | 
-|Protótipo Interativo | MavelApp ou Figma | https://figma.com/XXXXXXX | 
-
->
-> Liste as ferramentas empregadas no desenvolvimento do
-> projeto, justificando a escolha delas, sempre que possível.
-> 
-> As ferramentas empregadas no projeto são:
-> 
-> - Editor de código.
-> - Ferramentas de comunicação
-> - Ferramentas de diagramação
-> - Plataforma de hospedagem
-> 
-> O editor de código foi escolhido porque ele possui uma integração com o
-> sistema de versão. As ferramentas de comunicação utilizadas possuem
-> integração semelhante e por isso foram selecionadas. Por fim, para criar
-> diagramas utilizamos essa ferramenta por melhor captar as
-> necessidades da nossa solução.
-> 
-> **Links Úteis - Hospedagem**:
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Crie seu Site com o HostGator](https://www.hostgator.com.br/como-publicar-seu-site)
-> - [GoDady](https://br.godaddy.com/how-to)
-> - [GitHub Pages](https://pages.github.com/)
+|Divisão de tarefas  | Trello | https://trello.com/b/4geW6aSz/tiaw-puctoria | 
+|Repositório de código | GitHub |(https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw-2023-2-gestaodemonitorias/edit/master/docs/relatorio/Relatorio%20Tecnico%20-%20TEMPLATE.md) | 
+|Wireframe  | Figma | https://www.figma.com/file/STOfWOhxehC8RZllHS0BxV/PucToria?type=design&node-id=0-1&mode=design | 
 
 ## Controle de Versão
 
