@@ -251,10 +251,14 @@ monitoria.
 
 ......  COLOQUE AQUI O SEU TEXTO ......
 
-> Discuta como a configuração do projeto foi feita na ferramenta de
-> versionamento escolhida. Exponha como a gerência de tags, merges,
-> commits e branchs é realizada. Discuta como a gerência de issues foi
-> realizada.
+> O projeto será desenvolvido via VSCode utlizando HTML, CSS e JS puro.
+> Para controle de versionamento, utilizaremos a plataforma GitHub (com
+> o ambiente Classroom PUC-Minas a partir do template do professor Gabriel
+> B. Fonseca. Nosso gerenciamento de tags, merges, commits e branchs seguirá
+> o padrão master/main para versão final com uma versão prévia ele denominada
+> testing na qual controlaremos os merges/commits através do Trello, sendo o
+> código final só aprovado e comitado caso OUTRO dev analise o código previamente.
+> 
 > A ferramenta de controle de versão adotada no projeto foi o
 > [Git](https://git-scm.com/), sendo que o [Github](https://github.com)
 > foi utilizado para hospedagem do repositório `upstream`.
