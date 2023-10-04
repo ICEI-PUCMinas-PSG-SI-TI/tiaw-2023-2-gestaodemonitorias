@@ -98,9 +98,10 @@ O Público alvo da nossa aplicação será todas pessoas em um ambiente escolar 
 
 # Especificações do Projeto
 
-1.Ferramenta do Trello para a divisão de trabalho
-2.Ferramenta Figma para o wireframe
-3.Técnica usada foi a metodologia Scrum
+* 1.Ferramenta do Trello para a divisão de trabalho
+* 2.Ferramenta Figma para o wireframe
+* 3.Técnica usada foi a metodologia Scrum
+* 4. O ambiente de desenvolvimento será VSCode com controle de repositórios em GitHub.
 
 ## Personas e Mapas de Empatia
 
@@ -184,7 +185,7 @@ tela inicial do usuário logado no site.
 Construida semelhante a de criação de conta e de login de sites como twitter e facebook,
 é facilmente navegada com as principais informações expostas na tela: e-mail, usuário,
 e senha, para credenciais, e as principais intenções do usuário no site: ser monitor, aluno
-ou ambos, assim com as tecnologias que pretende ensinar/aprender.
+ou ambos, assim com as tecnologias que pretende ensinar/aprender, atendendo os requisitos funcionais esperados.
 
 ### TELA USUÁRIO LOGADO
 ![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw-2023-2-gestaodemonitorias/assets/74263483/7cc73ce6-f417-4e2c-aa8c-dc64805f3069)
@@ -195,13 +196,8 @@ publicos construida como um calendário (inspirado no Google Calendar) no qual o
 eventos são facilmente visiveis com cores vivas, uma recomendações de outros 
 monitores e/ou alunos cadastrados na plataforma, linkando novos contatos e por fim 
 uma interface de inscrição para se voluntariar para ajudar no desenvolvimento
-do aplicativo.
+do aplicativo, atendendo os requisitos funcionais esperados.
 
-
-> Apresente as principais interfaces da solução. Discuta como 
-> foram elaboradas de forma a atender os requisitos funcionais, não
-> funcionais e histórias de usuário abordados nas [Especificações do
-> Projeto](#especificações-do-projeto).
 
 ## User Flow
 
