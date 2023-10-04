@@ -176,27 +176,30 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 # Projeto de Interface
 
-A interface do site foi prototipada para ter a aparencia de uma rede social (como Facebook)
-e um fórum organizacional estilo CANVAS PUC. Desta forma, o usuário tem um contato inicial com 
-uma UI reconhecivel de outros sites. Dois exemplos primordias são a tela de login e a 
-tela inicial do usuário logado no site.
+> A interface do site foi prototipada para ter a aparencia de uma rede social (como Facebook)
+> e um fórum organizacional estilo CANVAS PUC. Desta forma, o usuário tem um contato inicial com 
+> uma UI reconhecivel de outros sites. Dois exemplos primordias são a tela de login e a 
+> tela inicial do usuário logado no site.
+
 ### TELA DE LOGIN
 ![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw-2023-2-gestaodemonitorias/assets/74263483/8ffc55eb-2fa4-40ee-8e2e-6e79234befd0)
-Construida semelhante a de criação de conta e de login de sites como twitter e facebook,
-é facilmente navegada com as principais informações expostas na tela: e-mail, usuário,
-e senha, para credenciais, e as principais intenções do usuário no site: ser monitor, aluno
-ou ambos, assim com as tecnologias que pretende ensinar/aprender, atendendo os requisitos funcionais esperados.
+
+> Construida semelhante a de criação de conta e de login de sites como twitter e facebook,
+> é facilmente navegada com as principais informações expostas na tela: e-mail, usuário,
+> e senha, para credenciais, e as principais intenções do usuário no site: ser monitor, aluno
+> ou ambos, assim com as tecnologias que pretende ensinar/aprender, atendendo os requisitos funcionais esperados.
 
 ### TELA USUÁRIO LOGADO
 ![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw-2023-2-gestaodemonitorias/assets/74263483/7cc73ce6-f417-4e2c-aa8c-dc64805f3069)
-A tela inicial do usuário logado apresenta todas as informações necessárias para o uso
-efetivo da plataforma: os principais posts expostos no centro da tela, um botão 
-centralizado para ter acesso aos eventos privados, uma janeladedicada aos eventos 
-publicos construida como um calendário (inspirado no Google Calendar) no qual os 
-eventos são facilmente visiveis com cores vivas, uma recomendações de outros 
-monitores e/ou alunos cadastrados na plataforma, linkando novos contatos e por fim 
-uma interface de inscrição para se voluntariar para ajudar no desenvolvimento
-do aplicativo, atendendo os requisitos funcionais esperados.
+
+> A tela inicial do usuário logado apresenta todas as informações necessárias para o uso
+> efetivo da plataforma: os principais posts expostos no centro da tela, um botão 
+> centralizado para ter acesso aos eventos privados, uma janeladedicada aos eventos 
+> publicos construida como um calendário (inspirado no Google Calendar) no qual os 
+> eventos são facilmente visiveis com cores vivas, uma recomendações de outros 
+> monitores e/ou alunos cadastrados na plataforma, linkando novos contatos e por fim 
+> uma interface de inscrição para se voluntariar para ajudar no desenvolvimento
+> do aplicativo, atendendo os requisitos funcionais esperados.
 
 
 ## User Flow
@@ -211,22 +214,22 @@ do aplicativo, atendendo os requisitos funcionais esperados.
 
 # Metodologia
 
-No desenvolvimento do nosso aplicativo de monitoria, adotaremos uma metodologia
-ágil chamada Scrum. O Scrum envolve a divisão do projeto em sprints de 2 a 4
-semanas, cada uma focada em tarefas priorizadas. Reuniões diárias chamadas de
-Daily Standup são realizadas para manter a equipe atualizada e promover a
-comunicação aberta. Essa abordagem visa garantir entregas regulares de valor e
-adaptabilidade às necessidades dos usuários no desenvolvimento do aplicativo de
-monitoria.
+> No desenvolvimento do nosso aplicativo de monitoria, adotaremos uma metodologia
+> ágil chamada Scrum. O Scrum envolve a divisão do projeto em sprints de 2 a 4
+> semanas, cada uma focada em tarefas priorizadas. Reuniões diárias chamadas de
+> Daily Standup são realizadas para manter a equipe atualizada e promover a
+> comunicação aberta. Essa abordagem visa garantir entregas regulares de valor e
+> adaptabilidade às necessidades dos usuários no desenvolvimento do aplicativo de
+> monitoria.
 
 
-No desenvolvimento do nosso aplicativo de monitoria, adotaremos uma metodologia
-ágil chamada Scrum. O Scrum envolve a divisão do projeto em sprints de 2 a 4
-semanas, cada uma focada em tarefas priorizadas. Reuniões diárias chamadas de
-Daily Standup são realizadas para manter a equipe atualizada e promover a
-comunicação aberta. Essa abordagem visa garantir entregas regulares de valor e
-adaptabilidade às necessidades dos usuários no desenvolvimento do aplicativo de
-monitoria.
+> No desenvolvimento do nosso aplicativo de monitoria, adotaremos uma metodologia
+> ágil chamada Scrum. O Scrum envolve a divisão do projeto em sprints de 2 a 4
+> semanas, cada uma focada em tarefas priorizadas. Reuniões diárias chamadas de
+> Daily Standup são realizadas para manter a equipe atualizada e promover a
+> comunicação aberta. Essa abordagem visa garantir entregas regulares de valor e
+> adaptabilidade às necessidades dos usuários no desenvolvimento do aplicativo de
+> monitoria.
 
 
 ## Divisão de Papéis
@@ -240,7 +243,6 @@ monitoria.
 * Nathanael - Dev
 
 
-
 ## Ferramentas
 
 |Divisão de tarefas  | Trello | https://trello.com/b/4geW6aSz/tiaw-puctoria | 
@@ -248,8 +250,6 @@ monitoria.
 |Wireframe  | Figma | https://www.figma.com/file/STOfWOhxehC8RZllHS0BxV/PucToria?type=design&node-id=0-1&mode=design | 
 
 ## Controle de Versão
-
-......  COLOQUE AQUI O SEU TEXTO ......
 
 > O projeto será desenvolvido via VSCode utlizando HTML, CSS e JS puro.
 > Para controle de versionamento, utilizaremos a plataforma GitHub (com
