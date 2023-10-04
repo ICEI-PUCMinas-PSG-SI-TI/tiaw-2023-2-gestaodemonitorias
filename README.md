@@ -14,7 +14,6 @@ O objetivo deste projeto é facilitar a conexão entre alunos que buscam aprimor
 ## Professores responsáveis
 
 * Gabriel Barbosa Fonsceca
-* Nome completo do professor 2
 
 ## Instruções de utilização
 
