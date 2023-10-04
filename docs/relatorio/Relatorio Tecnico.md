@@ -9,13 +9,13 @@ Análise e desenvolvimento de sistema
 
 ## Participantes
 
-Gustavo Barcelos
-Vinicius Tivo
-Gabriel Coimbra
-Daniel Costa
-Cairo Lacerda
-Bruno
-Nathanael
+* Gustavo Barcelos
+* Vinicius Tivo
+* Gabriel Coimbra
+* Daniel Costa
+* Cairo Lacerda
+* Bruno
+* Nathanael
 
 # Estrutura do Documento
 
@@ -214,13 +214,13 @@ monitoria.
 
 ## Divisão de Papéis
 
-Gustavo Barcelos - Dev
-Vinicius Tivo - Dev
-Gabriel Coimbra - Dev
-Daniel Costa - Dev
-Cairo Lacerda - Dev
-Bruno - Dev
-Nathanael - Dev
+* Gustavo Barcelos - Dev
+* Vinicius Tivo - Dev
+* Gabriel Coimbra - Dev
+* Daniel Costa - Dev
+* Cairo Lacerda - Dev
+* Bruno - Dev
+* Nathanael - Dev
 
 
 
