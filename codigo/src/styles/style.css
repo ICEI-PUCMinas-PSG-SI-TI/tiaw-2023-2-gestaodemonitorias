@@ -1,0 +1,73 @@
+/* CORES PRINCIPAIS */
+:root {
+  --primary-color: #003459;
+  --secondary-color: #007ea7;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #00a8e8;
+  --light-color: #f8f9fa;
+  --dark-color: #00171f;
+}
+
+
+/* Set default font family and size */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 50px;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--light-color);
+}
+
+/* Set default text color */
+p, span, a {
+  color: var(--dark-color);
+}
+
+/* Set default link styles */
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+li {
+  list-style: none;
+}
+
+/* Set default heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+/* Set default button styles */
+button {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
