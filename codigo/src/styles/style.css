@@ -250,6 +250,21 @@ h3 {
   flex-direction: row;
 }
 
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.deletePost {
+  color: var(--danger-color);
+  font-size: 1.2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
 /* Media Queries */
 
 @media (min-width: 768px) {

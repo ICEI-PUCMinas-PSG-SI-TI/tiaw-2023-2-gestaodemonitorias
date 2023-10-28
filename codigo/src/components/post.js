@@ -9,20 +9,24 @@ const PostFeed = (post) => {
   };
 
   return `
-    <div class="monitor">
+    <div class="postHeader">
+      <div class="monitor">
+        <div class="imageContainer">
+          <img src="${post.image}" alt="Profile Image" class="monitorImage">
+        </div>
 
-    <div class="imageContainer">
-      <img src="${post.image}" alt="Profile Image" class="monitorImage">
-    </div>
-
-    <div class="monitorInfo">
-      <div class="monitorInfoIcon">
-        <i class="fas fa-user-tie"></i>
-        <h2 class="monitorNome">${post.monitor.name}</h2>
+        <div class="monitorInfo">
+          <div class="monitorInfoIcon">
+            <i class="fas fa-user-tie"></i>
+            <h2 class="monitorNome">${post.monitor.name}</h2>
+          </div>
+          <p class="aprovamMonitor">${post.monitor.aprovacao} aprovam</p>
+        </div>
       </div>
-      <p class="aprovamMonitor">${post.monitor.aprovacao} aprovam</p>
-    </div>
-    
+
+      <div class="deletePost" data-post-id="${post.id}">
+        <i data-post-id="${post.id}" class="fas fa-times deletePost"></i>
+      </div>
     </div>
 
     <p class="postText">${post.text}</p>
