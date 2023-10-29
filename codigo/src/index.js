@@ -2,6 +2,7 @@ import PostFeed from './components/post.js';
 import { UserPostData } from './utils/userData.js';
 
 const postElement = document.querySelector('#postList');
+const searchInput = document.querySelector('#search');
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -64,3 +65,24 @@ const deletePost = (posts, postId) => {
 
   renderPosts();
 };
+
+document.addEventListener('input', function(event) {
+  const posts = getPostFromLocalStorage();
+  const searchValue = event.target.value.toLowerCase();
+
+  const filteredPosts = posts.filter(post => {
+    const postText = post.text.toLowerCase();
+    const postMonitorName = post.monitor.name.toLowerCase();
+
+    return postText.includes(searchValue) || postMonitorName.includes(searchValue);
+  });
+
+  postElement.innerHTML = '';
+
+  filteredPosts.forEach(post => {
+    const newPost = document.createElement('div');
+    newPost.classList.add('post');
+    newPost.innerHTML = PostFeed(post);
+    postElement.appendChild(newPost);
+  });
+});
