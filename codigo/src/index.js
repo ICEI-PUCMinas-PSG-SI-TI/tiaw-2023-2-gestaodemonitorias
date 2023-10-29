@@ -2,8 +2,6 @@ import PostFeed from './components/post.js';
 import { UserPostData } from './utils/userData.js';
 
 const postElement = document.querySelector('#postList');
-const agendarLink = document.querySelector('#agendaLink');
-
 
 document.addEventListener('DOMContentLoaded', function() {
   if (!localStorage.getItem('posts')) {
@@ -75,12 +73,10 @@ const agendarPost = (posts, postId) => {
     const postToAgendar = posts[indexToAgendar];
     const postEmail = postToAgendar.monitor.email;
 
-    // Exibir o email do post em um alerta
-    alert(`Para agendar, é necessário enviar um email para: ${postEmail}`);
+    alert(`Para agendar, é necessário enviar um email para: ${postEmail}`)
 
-    console.log('Post agendado com sucesso!');
   } else {
-    console.log('Post não encontrado para agendamento.');
+    console.error('Algo aconteceu de errado. Não foi possível agendar o post.');
   }
 
   renderPosts();
@@ -113,12 +109,11 @@ document.addEventListener('click', function(event) {
   if (event.target.classList.contains('booking')) {
     const post = event.target.parentElement;
     const postId = post.dataset.postId;
-    console.log('ID do post:', postId);
 
     if (postId) {
       agendarPost(posts, postId);
     } else {
-      console.log('ID do post não encontrado ou é indefinido.');
+      console.error('ID do post não encontrado ou é indefinido.');
     }
   }
 });
