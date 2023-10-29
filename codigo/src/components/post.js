@@ -43,8 +43,8 @@ const PostFeed = (post) => {
     </div>
 
     <div class="agendar">
-      <a href="#" class="agendarLink">
-        <p class="agendarNome">Agendar</p>
+      <a id="agendaLink" href="#" class="agendarLink" data-post-id="${post.id}">
+        <p class="agendarNome booking">Agendar</p>
         <i class="agendarIcon fas fa-share"></i>
       </a>
     </div>

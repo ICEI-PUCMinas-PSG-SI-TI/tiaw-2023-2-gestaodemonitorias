@@ -2,7 +2,7 @@ import PostFeed from './components/post.js';
 import { UserPostData } from './utils/userData.js';
 
 const postElement = document.querySelector('#postList');
-const searchInput = document.querySelector('#search');
+const agendarLink = document.querySelector('#agendaLink');
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -66,6 +66,26 @@ const deletePost = (posts, postId) => {
   renderPosts();
 };
 
+const agendarPost = (posts, postId) => {
+  console.log('agendar', postId);
+
+  const indexToAgendar = posts.findIndex(post => post.id === Number(postId));
+
+  if (indexToAgendar !== -1) {
+    const postToAgendar = posts[indexToAgendar];
+    const postEmail = postToAgendar.monitor.email;
+
+    // Exibir o email do post em um alerta
+    alert(`Para agendar, é necessário enviar um email para: ${postEmail}`);
+
+    console.log('Post agendado com sucesso!');
+  } else {
+    console.log('Post não encontrado para agendamento.');
+  }
+
+  renderPosts();
+};
+
 document.addEventListener('input', function(event) {
   const posts = getPostFromLocalStorage();
   const searchValue = event.target.value.toLowerCase();
@@ -86,3 +106,20 @@ document.addEventListener('input', function(event) {
     postElement.appendChild(newPost);
   });
 });
+
+document.addEventListener('click', function(event) {
+  const posts = getPostFromLocalStorage();
+
+  if (event.target.classList.contains('booking')) {
+    const post = event.target.parentElement;
+    const postId = post.dataset.postId;
+    console.log('ID do post:', postId);
+
+    if (postId) {
+      agendarPost(posts, postId);
+    } else {
+      console.log('ID do post não encontrado ou é indefinido.');
+    }
+  }
+});
+
