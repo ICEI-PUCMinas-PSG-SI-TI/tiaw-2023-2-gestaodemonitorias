@@ -2,6 +2,7 @@ import PostFeed from './components/post.js';
 import { UserPostData } from './utils/userData.js';
 
 const postElement = document.querySelector('#postList');
+const privateMessageBtn = document.querySelector('#privateMessage');
 
 document.addEventListener('DOMContentLoaded', function() {
   if (!localStorage.getItem('posts')) {
@@ -118,3 +119,10 @@ document.addEventListener('click', function(event) {
   }
 });
 
+privateMessageBtn.addEventListener('click', function(event) {
+
+  alert(`
+    Para enviar uma mensagem privada, é necessário enviar um email para o email cadastrado.
+    Este cadastro será feito em breve.
+  `)
+});
