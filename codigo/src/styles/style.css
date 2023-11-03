@@ -137,3 +137,17 @@ h3 {
 
 }
 
+.cadastro {
+    background-color: azure;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.introducao {
+  margin:auto;
+  text-align: center;
+  max-width: 500px;
+}
+
