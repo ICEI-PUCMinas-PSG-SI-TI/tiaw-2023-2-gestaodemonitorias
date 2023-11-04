@@ -2,7 +2,7 @@ import { UserPostData } from '../utils/userData.js';
 
 const createMonitoresCard = (monitores) => {
   const card = document.createElement('div');
-  card.classList.add('card');
+  card.classList.add('card-monitor');
 
   const header = document.createElement('div');
   header.classList.add('card-header');
@@ -46,9 +46,9 @@ const createMonitoresCard = (monitores) => {
     button.classList.add('ver-btn');
     button.textContent = '+ Ver';
     button.addEventListener('click', () => {
-      // Ação ao clicar no botão "Ver", por exemplo:
       // window.location.href = `perfil/${monitor.id}`; // Redireciona para o perfil do monitor com base no ID
-      console.log('monitor.id', dadosMonitor.id);
+      console.log(`Redireciona para o perfil do monitor com base no ID ${dadosMonitor.id}`);
+      alert(`Redireciona para o perfil do monitor com base no ID ${dadosMonitor.id}`);
     });
     info.appendChild(button);
 
