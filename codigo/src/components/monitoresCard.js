@@ -3,6 +3,13 @@ import { UserPostData } from '../utils/userData.js';
 const createMonitoresCard = (monitores) => {
   const card = document.createElement('div');
   card.classList.add('card-monitor');
+  card.style.marginTop = '20px';
+  card.style.backgroundColor = '#fff';
+  card.style.padding = '20px';
+  card.style.borderRadius = '10px';
+  card.style.boxShadow = '0px 2px 4px rgba(0, 0, 0, 0.25)';
+  card.style.display = 'flex';
+  card.style.flexDirection = 'column';
 
   const header = document.createElement('div');
   header.classList.add('card-header');
