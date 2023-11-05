@@ -72,3 +72,43 @@ document.getElementById('entrarBtn').addEventListener('click', function() {
     }
 });
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Recupere os registros de cadastro do localStorage
+    var registrosExistentes = localStorage.getItem('cadastros');
+    var registros = [];
+  
+    if (registrosExistentes) {
+      registros = JSON.parse(registrosExistentes);
+    }
+  
+    var userTable = document.getElementById('user-list');
+  
+    registros.forEach(function(registro, index) {
+      var row = userTable.insertRow();
+      row.insertCell(0).textContent = index + 1; // ID do usuário
+      row.insertCell(1).textContent = registro.nome; // Nome do usuário
+      row.insertCell(2).textContent = registro.email; // Email do usuário
+      row.insertCell(3).textContent = registro.perfil; // Perfil do usuário
+  
+      var actionsCell = row.insertCell(4);
+      var editButton = document.createElement('button');
+      editButton.textContent = 'Editar';
+      editButton.addEventListener('click', function() {
+        // Lógica de edição do usuário
+        alert('Implemente a lógica de edição aqui');
+      });
+  
+      var deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Excluir';
+      deleteButton.addEventListener('click', function() {
+        // Lógica de exclusão do usuário
+        alert('Implemente a lógica de exclusão aqui');
+      });
+  
+      actionsCell.appendChild(editButton);
+      actionsCell.appendChild(deleteButton);
+    });
+  });
+  
+
