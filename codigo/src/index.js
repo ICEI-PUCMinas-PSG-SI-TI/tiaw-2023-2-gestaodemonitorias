@@ -1,13 +1,19 @@
 import PostFeed from './components/post.js';
-import { UserPostData } from './utils/userData.js';
 
 const postElement = document.querySelector('#postList');
 const privateMessageBtn = document.querySelector('#privateMessage');
 
 document.addEventListener('DOMContentLoaded', function() {
-  if (!localStorage.getItem('posts')) {
-    saveToLocalStorage(UserPostData);
-  }
+  fetch('https://my-json-server.typicode.com/dancosta-fed/mockjsonserver/UserData')
+    .then(response => response.json())
+    .then(posts => {
+      console.log('Dados recebidos: ', posts);
+      saveToLocalStorage(posts);
+      renderPosts();
+    })
+    .catch(error => {
+      console.error('Erro ao fazer o fetch dos dados: ', error);
+    });
 
   renderPosts();
 });

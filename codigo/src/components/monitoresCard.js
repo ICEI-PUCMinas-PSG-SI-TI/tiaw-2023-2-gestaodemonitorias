@@ -1,4 +1,3 @@
-import { UserPostData } from '../utils/userData.js';
 
 const createMonitoresCard = (monitores) => {
   const card = document.createElement('div');
@@ -21,7 +20,7 @@ const createMonitoresCard = (monitores) => {
   const list = document.createElement('ul');
   list.classList.add('list-group');
 
-  UserPostData.forEach(dadosMonitor => {
+  monitores.forEach(dadosMonitor => {
     const item = document.createElement('li');
     item.classList.add('list-group-item');
 
@@ -70,7 +69,21 @@ const createMonitoresCard = (monitores) => {
   return card;
 }
 
-const card = createMonitoresCard(monitores);
+// Usando o fetch para buscar os dados dos monitores
+// Json server criado para simular uma API, assim como ensinado na materéria de DIW
+const fetchMonitorDataAndCreateCards = () => {
+  fetch('https://my-json-server.typicode.com/dancosta-fed/mockjsonserver/UserData')
+    .then(response => response.json())
+    .then(data => {
+      const monitores = data;
+      const card = createMonitoresCard(monitores);
+      const asideMonitores = document.getElementById('monitores');
+      asideMonitores.appendChild(card);
+    })
+    .catch(error => {
+      console.error('Error fetching monitor data:', error);
+    });
+};
 
-const asideMonitores = document.getElementById('monitores');
-asideMonitores.appendChild(card);
+document.addEventListener('DOMContentLoaded', fetchMonitorDataAndCreateCards);
+
