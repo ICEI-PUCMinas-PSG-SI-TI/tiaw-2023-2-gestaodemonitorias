@@ -1,13 +1,14 @@
-import PostFeed from './components/post.js';
+import { PostFeed } from '../../components/post.js';
 
 const postElement = document.querySelector('#postList');
 const privateMessageBtn = document.querySelector('#privateMessage');
 
 document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM carregado com sucesso!');
+
   fetch('https://my-json-server.typicode.com/dancosta-fed/mockjsonserver/UserData')
     .then(response => response.json())
     .then(posts => {
-      console.log('Dados recebidos: ', posts);
       saveToLocalStorage(posts);
       renderPosts();
     })
@@ -81,6 +82,8 @@ const agendarPost = (posts, postId) => {
     const postEmail = postToAgendar.monitor.email;
 
     alert(`Para agendar, é necessário enviar um email para: ${postEmail}`)
+
+    window.location.href = `../Evento/evento.html`;
 
   } else {
     console.error('Algo aconteceu de errado. Não foi possível agendar o post.');

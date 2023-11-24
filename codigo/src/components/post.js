@@ -1,4 +1,4 @@
-const PostFeed = (post) => {
+export const PostFeed = (post) => {
   if(!post){
     return `
       <div class="post notFound">
@@ -44,11 +44,10 @@ const PostFeed = (post) => {
 
     <div class="agendar">
       <a id="agendaLink" href="#" class="agendarLink" data-post-id="${post.id}">
-        <p class="agendarNome booking">Agendar</p>
-        <i class="agendarIcon fas fa-share"></i>
+        <p class="agendarNome booking">Avaliar</p>
+        <i class="agendarIcon fas fa-star"></i>
       </a>
     </div>
   `;
 }
 
-export default PostFeed;
