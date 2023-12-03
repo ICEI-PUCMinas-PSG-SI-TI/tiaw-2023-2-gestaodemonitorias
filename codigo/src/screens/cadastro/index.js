@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             console.log('Cadastro realizado com sucesso:', data);
             alert('Cadastro realizado com sucesso!');
-            window.location.href = '../Feed/feed.html';
+            window.location.replace('../Feed/feed.html');
         })
         .catch(error => {
             console.error('Erro ao cadastrar:', error);
