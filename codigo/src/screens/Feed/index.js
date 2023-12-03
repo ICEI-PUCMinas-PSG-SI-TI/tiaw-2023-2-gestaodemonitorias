@@ -78,8 +78,6 @@ const avaliarPost = (posts, postId) => {
     const postToAgendar = posts[indexToAvaliar];
     const postEmail = postToAgendar.monitor.email;
 
-    // alert(`Para agendar, é necessário enviar um email para: ${postEmail}`)
-
     window.location.href = `../Evento/evento.html`;
 
   } else {
