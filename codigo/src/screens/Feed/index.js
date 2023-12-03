@@ -29,6 +29,8 @@ const renderPosts = () => {
     newPost.classList.add('post');
     newPost.innerHTML = PostFeed(post);
     postElement.appendChild(newPost);
+
+    onHandleNameClick();
   });
 }
 
@@ -40,7 +42,6 @@ postElement.addEventListener('click', function(event) {
     if (confirmDelete) {
       const post = event.target;
       const postId = post.dataset.postId;
-      console.log('id', postId);
       deletePost(posts, postId);
     }
   }
@@ -56,8 +57,6 @@ const getPostFromLocalStorage = () => {
 };
 
 const deletePost = (posts, postId) => {
-  console.log('delete', postId);
-
   const indexToDelete = posts.findIndex(post => post.id === Number(postId));
 
   if (indexToDelete !== -1) {
@@ -72,21 +71,19 @@ const deletePost = (posts, postId) => {
   renderPosts();
 };
 
-const agendarPost = (posts, postId) => {
-  console.log('agendar', postId);
+const avaliarPost = (posts, postId) => {
+  const indexToAvaliar = posts.findIndex(post => post.id === Number(postId));
 
-  const indexToAgendar = posts.findIndex(post => post.id === Number(postId));
-
-  if (indexToAgendar !== -1) {
-    const postToAgendar = posts[indexToAgendar];
+  if (indexToAvaliar !== -1) {
+    const postToAgendar = posts[indexToAvaliar];
     const postEmail = postToAgendar.monitor.email;
 
-    alert(`Para agendar, é necessário enviar um email para: ${postEmail}`)
+    // alert(`Para agendar, é necessário enviar um email para: ${postEmail}`)
 
     window.location.href = `../Evento/evento.html`;
 
   } else {
-    console.error('Algo aconteceu de errado. Não foi possível agendar o post.');
+    console.error('Algo aconteceu de errado. Não foi possível avaliar o evento.');
   }
 
   renderPosts();
@@ -121,7 +118,7 @@ document.addEventListener('click', function(event) {
     const postId = post.dataset.postId;
 
     if (postId) {
-      agendarPost(posts, postId);
+      avaliarPost(posts, postId);
     } else {
       console.error('ID do post não encontrado ou é indefinido.');
     }
@@ -135,3 +132,22 @@ privateMessageBtn.addEventListener('click', function(event) {
     Este cadastro será feito em breve.
   `)
 });
+
+const onHandleNameClick = () => {
+  const imageContainers = document.querySelectorAll('.monitorNome');
+
+  imageContainers.forEach(container => {
+    container.addEventListener('click', function(event) {
+      const clickedMonitorName = event.target.textContent.trim();
+      const posts = getPostFromLocalStorage();
+
+      posts.forEach(post => {
+        if (post.monitor.name === clickedMonitorName) {
+          const serializedMonitor = encodeURIComponent(JSON.stringify(post));
+          window.location.href = `../Profile/profile.html?monitor=${serializedMonitor}`;
+        }
+      });
+    });
+  });
+};
+
