@@ -135,3 +135,5 @@ privateMessageBtn.addEventListener('click', function(event) {
     Este cadastro será feito em breve.
   `)
 });
+
+
