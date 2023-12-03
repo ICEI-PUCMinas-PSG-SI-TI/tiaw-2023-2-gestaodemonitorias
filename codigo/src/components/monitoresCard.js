@@ -52,9 +52,8 @@ const createMonitoresCard = (monitores) => {
     button.classList.add('ver-btn');
     button.textContent = '+ Ver';
     button.addEventListener('click', () => {
-      // window.location.href = `perfil/${monitor.id}`; // Redireciona para o perfil do monitor com base no ID
-      console.log(`Redireciona para o perfil do monitor com base no ID ${dadosMonitor.id}`);
-      alert(`Redireciona para o perfil do monitor com base no ID ${dadosMonitor.id}`);
+      onHandleVerClick(dadosMonitor.monitor.name, monitores);
+
     });
     info.appendChild(button);
 
@@ -86,4 +85,13 @@ const fetchMonitorDataAndCreateCards = () => {
 };
 
 document.addEventListener('DOMContentLoaded', fetchMonitorDataAndCreateCards);
+
+const onHandleVerClick = (nome, monitores) => {
+  const post = monitores.find(post => post.monitor.name === nome);
+
+  if (post) {
+    const serializedMonitor = encodeURIComponent(JSON.stringify(post));
+    window.location.href = `../Profile/profile.html?monitor=${serializedMonitor}`;
+  }
+};
 
