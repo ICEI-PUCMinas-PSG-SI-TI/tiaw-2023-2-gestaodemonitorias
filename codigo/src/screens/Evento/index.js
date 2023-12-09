@@ -31,7 +31,6 @@ function SalvarDados(ambienteElement, didaticaElement, conteudoElement, geralEle
         comentario: comentario
     };
 
-    // Utilize a função fetch para enviar os dados para o JSON Server
     fetch('https://jsonserver--nathanaelsouza.repl.co/avaliacoes', {
         method: 'POST',
         headers: {
@@ -39,13 +38,16 @@ function SalvarDados(ambienteElement, didaticaElement, conteudoElement, geralEle
         },
         body: JSON.stringify(avaliacao),
     })
-    .then(response => response.json())
-    .then(data => {
-        alert("Avaliação salva com sucesso!");
-        contadorId++;
-    })
-    .catch(error => {
-        console.error('Erro ao salvar a avaliação:', error);
-        alert("Erro ao salvar a avaliação. Por favor, tente novamente.");
-    });
+        .then(response => response.json())
+        .then(data => {
+            alert("Avaliação salva com sucesso!");
+            contadorId++;
+            //window.location.href = "https://www.exemplo.com";
+
+
+        })
+        .catch(error => {
+            console.error('Erro ao salvar a avaliação:', error);
+            alert("Erro ao salvar a avaliação. Por favor, tente novamente.");
+        });
 }
