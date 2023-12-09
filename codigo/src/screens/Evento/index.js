@@ -1,5 +1,4 @@
 var contadorId = 1;
-var avaliacoes = [];
 
 document.getElementById('btnenviar').addEventListener('click', LerDados);
 
@@ -12,18 +11,12 @@ function LerDados() {
 
     if (!ambienteElement || !didaticaElement || !conteudoElement || !geralElement || comentario === '') {
         alert("Por favor, preencha todos os campos de avaliação.");
-
+    } else {
+        SalvarDados(ambienteElement, didaticaElement, conteudoElement, geralElement, comentario);
     }
-    else {
-
-        alert(`${SalvarDados(ambienteElement,didaticaElement,conteudoElement,geralElement,comentario)}`);
-
-        contadorId++;
-    }
-
 }
 
-function SalvarDados(ambienteElement,didaticaElement,conteudoElement,geralElement,comentario) {
+function SalvarDados(ambienteElement, didaticaElement, conteudoElement, geralElement, comentario) {
     var ambienteValue = ambienteElement.value;
     var didaticaValue = didaticaElement.value;
     var conteudoValue = conteudoElement.value;
@@ -38,12 +31,21 @@ function SalvarDados(ambienteElement,didaticaElement,conteudoElement,geralElemen
         comentario: comentario
     };
 
-    avaliacoes.push(avaliacao);
-
-    var jsonAvaliacao = JSON.stringify(avaliacoes);
-
-    localStorage.setItem(`avaliacao`, jsonAvaliacao);
-
-    return jsonAvaliacao;
-
+    // Utilize a função fetch para enviar os dados para o JSON Server
+    fetch('https://jsonserver--nathanaelsouza.repl.co/avaliacoes', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(avaliacao),
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert("Avaliação salva com sucesso!");
+        contadorId++;
+    })
+    .catch(error => {
+        console.error('Erro ao salvar a avaliação:', error);
+        alert("Erro ao salvar a avaliação. Por favor, tente novamente.");
+    });
 }
