@@ -353,6 +353,15 @@ h3 {
   color: var(--primary-color);
 }
 
+.navbarclass {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 /* Media Queries */
 
 @media (min-width: 768px) {

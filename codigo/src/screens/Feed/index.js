@@ -6,6 +6,16 @@ const privateMessageBtn = document.querySelector('#privateMessage');
 document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM carregado com sucesso!');
 
+  const sairBtn = document.getElementById("sairBtn");
+  sairBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    localStorage.clear();
+    window.location.href = "/codigo/src/screens/Login/login.html";
+  });
+
+  const user = JSON.parse(localStorage.getItem('usuarioLogado'));
+  cardContent(user);
+
   fetch('https://my-json-server.typicode.com/dancosta-fed/mockjsonserver/UserData')
     .then(response => response.json())
     .then(posts => {
@@ -18,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   renderPosts();
 });
+
 
 const renderPosts = () => {
   const posts = getPostFromLocalStorage();
@@ -46,6 +57,16 @@ postElement.addEventListener('click', function(event) {
     }
   }
 });
+
+const cardContent = (userData) => {
+  const imageUrl = "https://res.cloudinary.com/dognkye6x/image/upload/v1701608994/placeholder_pm716g.png";
+  const image = userData.image ? userData.image : imageUrl;
+
+  // Update HTML elements with the retrieved data
+  document.getElementById("userNameCard").innerText = userData.nome;
+  document.getElementById("status").innerText = userData.perfil;
+  document.getElementById("profileImageCard").src = image;
+}
 
 const saveToLocalStorage = (posts) => {
   localStorage.setItem('posts', JSON.stringify(posts));

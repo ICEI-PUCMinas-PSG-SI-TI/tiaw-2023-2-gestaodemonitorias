@@ -9,6 +9,7 @@ document.getElementById('entrarBtn').addEventListener('click', function() {
             if (usuarioEncontrado) {
                 alert(`Seja bem-vindo ${usuarioEncontrado.nome}. Espero que goste do site!`);
                 window.location.href = '../Feed/feed.html';
+                localStorage.setItem('usuarioLogado', JSON.stringify(usuarioEncontrado));
             } else {
                 alert('Credenciais inválidas. Verifique seu nome de usuário e senha. Caso não possua conta, cadastre-se no botão abaixo do login.');
             }
