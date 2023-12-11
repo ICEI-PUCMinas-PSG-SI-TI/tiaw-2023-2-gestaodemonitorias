@@ -38,7 +38,6 @@ function SalvarDados(ambienteElement, didaticaElement, conteudoElement, geralEle
         .then(response => response.json())
         .then(data => {
             alert("Avaliação salva com sucesso!");
-            contadorId++;
             //window.location.href = "https://www.exemplo.com";
 
 
