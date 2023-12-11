@@ -60,11 +60,17 @@ postElement.addEventListener('click', function(event) {
 
 const cardContent = (userData) => {
   const imageUrl = "https://res.cloudinary.com/dognkye6x/image/upload/v1701608994/placeholder_pm716g.png";
-  const image = userData.image ? userData.image : imageUrl;
+  let image = "";
+
+  if (userData?.image) {
+    image = userData.image;
+  } else {
+    image = imageUrl;
+  }
 
   // Update HTML elements with the retrieved data
-  document.getElementById("userNameCard").innerText = userData.nome;
-  document.getElementById("status").innerText = userData.perfil;
+  document.getElementById("userNameCard").innerText = userData?.nome ? userData.nome : '';
+  document.getElementById("status").innerText = userData?.perfil ? userData.perfil : '';
   document.getElementById("profileImageCard").src = image;
 }
 

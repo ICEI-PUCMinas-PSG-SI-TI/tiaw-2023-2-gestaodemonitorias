@@ -30,22 +30,19 @@
         <div class="col-md-6">
           <div class="introducao">
             <div>
-              <h2>Seja bem vindo ao PUCToria, um site desenvolvido pelos alunos de ADS com um simples propósito:
-                permitir que alunos possam organizar suas próprias monitorias voluntariamente</h2>
-              <p>Tomando como principio a ajuda mútua, o site foi desenvolvido com a intenção de criar curriculo para
-                aqueles que desejam se monitores e ofertar outros horários e didáticas para aqueles que visam aprender
-                ou reforçar algum conteúdo que possam ter dificuldade em sala.</p>
-              <p>Destacamos que o foco das monitorias são as <strong>linguagens aprendidas durante as aulas</strong>,
-                mas nada impede apresentação de novos conteúdos</p>
-              <p>Grupo resposavel pelo site: </p>
-              <ul>
-                <li>Daniel de Oliveira Costa</li>
-                <li>Vinicius Tivo Soares</li>
-                <li>Gustavo lucas soares Barcelo</li>
-                <li>Gabriel Coimbra</li>
-                <li>Nathanael</li>
-                <li>Cairo Lacerda Rodrigues</li>
-                <li>Bruno Silvério Madureira</li>
+              <div class="col-md-6">
+                    
+                <img src="https://res.cloudinary.com/dognkye6x/image/upload/v1702247096/puctoria-logo_nzk921.png" alt="Puctorias Logo" width="100%">
+
+                <ul>
+                    <li>Daniel de Oliveira Costa</li>
+                    <li>Vinicius Tivo Soares</li>
+                    <li>Nathanael Souza</li>
+                    <li>Gabriel Coimbra</li>
+                    <li>Cairo Lacerda Rodrigues</li>
+                </ul>
+                                      
+            </div>
               </ul>
             </div>
           </div>
@@ -56,15 +53,19 @@
             <form>
               <div class="form-group">
                 <label for="nome">Nome:</label>
-                <input type="text" class="form-control" id="nome" name="nome" required>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="nome" required>
               </div>
               <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" required autocomplete="username">
+                <input type="email" class="form-control" id="email" name="email" placeholder="email" required autocomplete="username">
               </div>
               <div class="form-group">
                 <label for="senha">Senha:</label>
-                <input type="password" class="form-control" id="senha" name="senha" required autocomplete="current-password">
+                <input type="password" class="form-control" id="senha" name="senha" placeholder="senha" autocomplete="current-password">
+              </div>
+              <div class="form-group">
+                <label for="senha">Image:</label>
+                <input type="text" class="form-control" id="image" placeholder="cole uma url de imagem" name="url">
               </div>
               <div class="form-group">
                 
@@ -133,9 +134,9 @@
     </div>
   </main>
 
-  <footer class="card-footer">
-    <p>&copy; 2023 Puctorias</p>
-  </footer>
+  <footer class="card-footer bg-body-tertiary">
+    <p class="p-2">&copy; 2023 Puctorias - Análise e Desenvolvimento de Sistemas - Puc Minas | São Gabriel</p>
+</footer>
 </body>
 
 <script src="/codigo/src/screens/cadastro/index.js"></script>

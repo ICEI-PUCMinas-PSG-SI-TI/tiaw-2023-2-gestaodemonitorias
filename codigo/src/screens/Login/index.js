@@ -19,3 +19,9 @@ document.getElementById('entrarBtn').addEventListener('click', function() {
             alert('Erro ao buscar informações de login. Por favor, tente novamente.');
         });
 });
+
+// Botão de cadastro
+document.getElementById('cadastrarBtn').addEventListener('click', function() {
+    const cadastroPath = '../cadastro/cadastro.html';
+    window.location.href = cadastroPath;
+});
