@@ -190,8 +190,6 @@ const onHandleNameClick = () => {
 
 document.addEventListener('click', function(event) {
 
-  console.log(event.target.classList);
-
   if (event.target.classList.contains('agendarCalend')) {
     window.location.href = `../Calendario/index.html`;
   }
