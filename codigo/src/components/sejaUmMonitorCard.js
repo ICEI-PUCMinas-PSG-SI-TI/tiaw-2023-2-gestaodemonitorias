@@ -34,8 +34,8 @@ button.addEventListener('mouseleave', () => {
 });
 
 button.addEventListener('click', () => {
-  console.log(`Redireciona para o cadastro de monitor`);
-  alert(`Redireciona para o cadastro de monitor`);
+  console.log('Botão clicado');
+  $('#myModal').modal('show');
 });
 
 // append elements to card
