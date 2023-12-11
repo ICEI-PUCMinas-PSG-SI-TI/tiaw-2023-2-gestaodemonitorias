@@ -34,7 +34,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 li {
@@ -262,6 +262,12 @@ h3 {
   color: var(--primary-color);
   display: flex;
   align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.agendarLink :hover {
+  color: var(--warning-color);
 }
 
 .agendarNome {

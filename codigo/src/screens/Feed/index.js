@@ -6,6 +6,16 @@ const privateMessageBtn = document.querySelector('#privateMessage');
 document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM carregado com sucesso!');
 
+  // fetch('https://jsonserver-puctoria--tiviin.repl.co/cadastros')
+  // .then(response => response.json())
+  // .then(posts => {
+  //   saveToLocalStorage(posts);
+  //   renderPosts();
+  // })
+  // .catch(error => {
+  //   console.error('Erro ao fazer o fetch dos dados: ', error);
+  // });
+
   const sairBtn = document.getElementById("sairBtn");
   sairBtn.addEventListener("click", function(event) {
     event.preventDefault();
@@ -44,6 +54,8 @@ const renderPosts = () => {
     onHandleNameClick();
   });
 }
+
+
 
 postElement.addEventListener('click', function(event) {
   const posts = getPostFromLocalStorage();
@@ -176,3 +188,11 @@ const onHandleNameClick = () => {
   });
 };
 
+document.addEventListener('click', function(event) {
+
+  console.log(event.target.classList);
+
+  if (event.target.classList.contains('agendarCalend')) {
+    window.location.href = `../Calendario/index.html`;
+  }
+});
