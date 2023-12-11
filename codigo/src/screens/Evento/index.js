@@ -1,5 +1,3 @@
-var contadorId = 1;
-
 document.getElementById('btnenviar').addEventListener('click', LerDados);
 
 function LerDados() {
@@ -23,7 +21,6 @@ function SalvarDados(ambienteElement, didaticaElement, conteudoElement, geralEle
     var geralValue = geralElement.value;
 
     var avaliacao = {
-        id: contadorId,
         ambiente: ambienteValue,
         didatica: didaticaValue,
         conteudo: conteudoValue,
@@ -41,10 +38,7 @@ function SalvarDados(ambienteElement, didaticaElement, conteudoElement, geralEle
         .then(response => response.json())
         .then(data => {
             alert("Avaliação salva com sucesso!");
-            contadorId++;
-            //window.location.href = "https://www.exemplo.com";
-
-
+            window.location.href = "../Feed/feed.html";
         })
         .catch(error => {
             console.error('Erro ao salvar a avaliação:', error);
