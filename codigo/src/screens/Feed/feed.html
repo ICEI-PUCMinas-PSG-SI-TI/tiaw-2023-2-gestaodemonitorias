@@ -6,6 +6,7 @@
     <title>Feed</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
@@ -68,6 +69,28 @@
 
       <div>
         <input id="search" type="text" class="searchBox" placeholder="Buscar posts...">
+      </div>
+
+      <div class="modal" tabindex="-1" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Junte-se a Equipe de Moderadores!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Quero expressar minha mais sincera gratidão por se voluntariar para fazer parte do nosso time de monitores voluntários no PucToria. Sua disposição em contribuir com seu tempo e conhecimento para ajudar a comunidade é verdadeiramente admirável. Seu comprometimento em compartilhar sua experiência para tornar a experiência de todos ainda melhor é incrivelmente valioso para nós.</p>
+
+                <p>Sua dedicação em ser um monitor voluntário não apenas enriquece a plataforma, mas também demonstra seu desejo genuíno de fazer a diferença. Obrigado por se juntar a nós nessa jornada de aprendizado e por estar disposto a ajudar os outros, fazendo do PucToria um lugar melhor para todos os seus usuários. Estamos ansiosos para trabalhar juntos e ver o impacto positivo que você trará para a nossa comunidade.</p>
+                <label for="emailInput" class="form-label">Digite seu e-mail:</label>
+                <input type="text" class="form-control" id="emailInput" placeholder="Seu e-mail aqui">             
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary">Enviar</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <section class="mainSection">
