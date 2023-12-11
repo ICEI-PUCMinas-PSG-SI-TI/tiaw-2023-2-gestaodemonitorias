@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var email = document.getElementById('email').value;
         var senha = document.getElementById('senha').value;
         var perfil = document.querySelector('input[name="perfil"]:checked').value;
+        var image = document.getElementById('image').value;
         
         var linguagens = [];
         var checkboxes = document.querySelectorAll('input[name="linguagem"]:checked');
@@ -19,7 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
             email: email,
             senha: senha,
             perfil: perfil,
-            linguagens: linguagens
+            linguagens: linguagens,
+            image: image
         };
   
         // Enviar os dados para o servidor usando fetch
@@ -35,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Cadastro realizado com sucesso:', data);
             alert('Cadastro realizado com sucesso!');
             window.location.replace('../Feed/feed.html');
+            localStorage.setItem('usuarioLogado', JSON.stringify(data));
         })
         .catch(error => {
             console.error('Erro ao cadastrar:', error);

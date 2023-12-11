@@ -42,9 +42,8 @@ function SalvarDados(ambienteElement, didaticaElement, conteudoElement, geralEle
         .then(data => {
             alert("Avaliação salva com sucesso!");
             contadorId++;
-            //window.location.href = "https://www.exemplo.com";
-
-
+            console.log('Avaliação salva com sucesso:', data);
+            window.location.href = "/codigo/src/screens/Feed/feed.html";
         })
         .catch(error => {
             console.error('Erro ao salvar a avaliação:', error);
