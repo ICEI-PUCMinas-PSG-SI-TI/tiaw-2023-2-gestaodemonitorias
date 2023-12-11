@@ -6,6 +6,26 @@ const privateMessageBtn = document.querySelector('#privateMessage');
 document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM carregado com sucesso!');
 
+  // fetch('https://jsonserver-puctoria--tiviin.repl.co/cadastros')
+  // .then(response => response.json())
+  // .then(posts => {
+  //   saveToLocalStorage(posts);
+  //   renderPosts();
+  // })
+  // .catch(error => {
+  //   console.error('Erro ao fazer o fetch dos dados: ', error);
+  // });
+
+  const sairBtn = document.getElementById("sairBtn");
+  sairBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    localStorage.clear();
+    window.location.href = "/codigo/src/screens/Login/login.html";
+  });
+
+  const user = JSON.parse(localStorage.getItem('usuarioLogado'));
+  cardContent(user);
+
   fetch('https://my-json-server.typicode.com/dancosta-fed/mockjsonserver/UserData')
     .then(response => response.json())
     .then(posts => {
@@ -18,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   renderPosts();
 });
+
 
 const renderPosts = () => {
   const posts = getPostFromLocalStorage();
@@ -34,6 +55,8 @@ const renderPosts = () => {
   });
 }
 
+
+
 postElement.addEventListener('click', function(event) {
   const posts = getPostFromLocalStorage();
   if (event.target.classList.contains('deletePost')) {
@@ -46,6 +69,22 @@ postElement.addEventListener('click', function(event) {
     }
   }
 });
+
+const cardContent = (userData) => {
+  const imageUrl = "https://res.cloudinary.com/dognkye6x/image/upload/v1701608994/placeholder_pm716g.png";
+  let image = "";
+
+  if (userData?.image) {
+    image = userData.image;
+  } else {
+    image = imageUrl;
+  }
+
+  // Update HTML elements with the retrieved data
+  document.getElementById("userNameCard").innerText = userData?.nome ? userData.nome : '';
+  document.getElementById("status").innerText = userData?.perfil ? userData.perfil : '';
+  document.getElementById("profileImageCard").src = image;
+}
 
 const saveToLocalStorage = (posts) => {
   localStorage.setItem('posts', JSON.stringify(posts));
@@ -149,3 +188,9 @@ const onHandleNameClick = () => {
   });
 };
 
+document.addEventListener('click', function(event) {
+
+  if (event.target.classList.contains('agendarCalend')) {
+    window.location.href = `../Calendario/index.html`;
+  }
+});

@@ -38,10 +38,22 @@ function SalvarDados(ambienteElement, didaticaElement, conteudoElement, geralEle
         .then(response => response.json())
         .then(data => {
             alert("Avaliação salva com sucesso!");
-            window.location.href = "../Feed/feed.html";
+            contadorId++;
+            //window.location.href = "https://www.exemplo.com";
+
+
         })
         .catch(error => {
             console.error('Erro ao salvar a avaliação:', error);
             alert("Erro ao salvar a avaliação. Por favor, tente novamente.");
         });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sairBtn = document.getElementById("sairBtn");
+    sairBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    localStorage.clear();
+    window.location.href = "/codigo/src/screens/Login/login.html";
+    });
+});

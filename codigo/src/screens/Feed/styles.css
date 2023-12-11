@@ -34,11 +34,22 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 li {
   list-style: none;
+}
+
+#sairBtn {
+  border: none;
+  background: none;
+  color: red;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
 }
 
 /* Set default heading styles */
@@ -262,6 +273,12 @@ h3 {
   color: var(--primary-color);
   display: flex;
   align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.agendarLink :hover {
+  color: var(--warning-color);
 }
 
 .agendarNome {
@@ -353,6 +370,22 @@ h3 {
   color: var(--primary-color);
 }
 
+.navbarclass {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.detalhesUser {
+  cursor: pointer;
+}
+
+.detalhesUser:hover {
+  color: var(--warning-color);
+}
 /* Media Queries */
 
 @media (min-width: 768px) {

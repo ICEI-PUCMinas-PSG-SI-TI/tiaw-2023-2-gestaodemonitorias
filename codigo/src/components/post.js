@@ -43,6 +43,10 @@ export const PostFeed = (post) => {
     </div>
 
     <div class="agendar">
+      <a id="agendarCalendario" href="#" class="agendarLink agendarCalend" data-post-id="${post.id}">
+        <p class="agendarNome agendarCalend avaliar">Agendar</p>
+      </a>
+
       <a id="agendaLink" href="#" class="agendarLink" data-post-id="${post.id}">
         <p class="agendarNome booking avaliar">Avaliar</p>
         <i class="agendarIcon fas fa-star"></i>
