@@ -372,6 +372,9 @@ h3 {
   cursor: pointer;
 }
 
+.detalhesUser:hover {
+  color: var(--warning-color);
+}
 /* Media Queries */
 
 @media (min-width: 768px) {
