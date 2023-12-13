@@ -9,12 +9,10 @@ Análise e desenvolvimento de sistema
 
 ## Participantes
 
-* Gustavo Barcelos
 * Vinicius Tivo
 * Gabriel Coimbra
 * Daniel Costa
 * Cairo Lacerda
-* Bruno
 * Nathanael
 
 # Estrutura do Documento
@@ -234,13 +232,11 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Divisão de Papéis
 
-* Gustavo Barcelos - Dev
-* Vinicius Tivo - Dev
-* Gabriel Coimbra - Dev
 * Daniel Costa - Dev
+* Vinicius Tivo - Dev
+*  Nathanael - Dev
+* Gabriel Coimbra - Dev
 * Cairo Lacerda - Dev
-* Bruno - Dev
-* Nathanael - Dev
 
 
 ## Ferramentas
@@ -286,91 +282,105 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 >
 > ![Exemplo de Wireframe](images/Github-Workflow.png)
 
-# **############## SPRINT 1 ACABA AQUI #############**
 
 
 # Projeto da Solução
 
-......  COLOQUE AQUI O SEU TEXTO ......
+> Ao longo do desenvolvimento do projeto inúmeros problemas e bugs foram identificados e prontamente, dentro do possível e do contexto inseridos, resolvidos pelos devs.
+> Atualmente nossa plataforma conta com um sistema de cadastro, login, controle de admin via cargo, adicição e exclusão de posts, avaliação de monitoria e diversas outras
+> funcionalidades ligadas ao Feed e suas interações com o usuario.
+
 
 ## Tecnologias Utilizadas
 
-......  COLOQUE AQUI O SEU TEXTO ......
+> Focamos no desenvolvimento da nossa plataforma seguindo o padrão desejado em sala:
+> HTML, CSS e JS puro, com o uso de algumas livrarias especificas como Bootstrap e certos pontos em JQuery.
+> Todo o servidor é realizado pela plataforma replit, na qual nosso Json Server está localizado (é necessário
+> iniciar o site (RUN) para que o server funcione)).
+>
+> No mais, das ferramentas utilizadas focamos apenas no VSCODE, tanto no Windows como no Mac.
+>
+> De forma geral, o Bootstrap permitiu construir uma rede social que tenha uma aparencia agradável já
+> atribuindo a ela as estilizações necessárias para que o JS funcione sem menor problema, de forma que
+> o usuario pode realizar o cadastro, logar, ter seu perfil gerado via JSON Server com as chamadas de
+> codigo JS, etc.
 
-> Descreva aqui qual(is) tecnologias você vai usar para resolver o seu
-> problema, ou seja, implementar a sua solução. Liste todas as
-> tecnologias envolvidas, linguagens a serem utilizadas, serviços web,
-> frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-> Apresente também uma figura explicando como as tecnologias estão
-> relacionadas ou como uma interação do usuário com o sistema vai ser
-> conduzida, por onde ela passa até retornar uma resposta ao usuário.
-> 
-> Inclua os diagramas de User Flow, esboços criados pelo grupo
-> (stoyboards), além dos protótipos de telas (wireframes). Descreva cada
-> item textualmente comentando e complementando o que está apresentado
-> nas imagens.
 
 ## Arquitetura da solução
 
-......  COLOQUE AQUI O SEU TEXTO E O DIAGRAMA DE ARQUITETURA .......
 
-> Inclua um diagrama da solução e descreva os módulos e as tecnologias
-> que fazem parte da solução. Discorra sobre o diagrama.
+> O WEB é criado via arquivo index.html, que puxa as informações estilizadas necessárias do CSS e do JS. Este último, em contrapartida,
+> puxa as informações do JSON para que a página WEB possa ser criada de forma dinâmica. No mais, o usuario também pode interagir com a
+> avaliação de outros perfis ou eventos expostos no feed, ao qual a avaliação é salva em um outro JSON Server e pode ser requisitada
+> na medida que necessário.
 > 
-> **Exemplo do diagrama de Arquitetura**:
-> 
-> ![Exemplo de Arquitetura](images/arquitetura-exemplo.png)
+> ![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw-2023-2-gestaodemonitorias/assets/74263483/6fa7b32c-3f5c-4e6a-b881-688e1982f621)
+
 
 
 # Avaliação da Aplicação
 
-......  COLOQUE AQUI O SEU TEXTO ......
 
-> Apresente os cenários de testes utilizados na realização dos testes da
-> sua aplicação. Escolha cenários de testes que demonstrem os requisitos
-> sendo satisfeitos.
+> Nossos planos inicias envolviam:
+> ID	Descrição do Requisito	Prioridade
+RF-001	Formulário de registro com campos para nome, e-mail, senha e informações de contato	ALTA
+RF-002	Calendário interativo com datas e horários de monitorias marcados	ALTA
+RF-003	Opção de filtrar monitorias por disciplina ou assunto	ALTA
+RF-004	Capacidade de cancelar a inscrição	MÉDIA
+Requisitos não Funcionais
+ID	Descrição do Requisito	Prioridade
+RNF-001	Painel de administração com opções para adicionar, editar e remover monitores	MÉDIA
+RNF-002	Capacidade de atribuir monitores a disciplinas ou grupos de estudo	BAIXA
+RNF-003	Botão de inscrição visível em cada monitoria	ALTA
+RNF-004	Confirmação de inscrição com lembrete por e-mail ou notificação push	MÉDIA
+RNF-005	•Relatórios que mostrem métricas como número de inscrições, avaliações e participações em monitorias	BAIXA
+>
+> No geral, pensando no REQUISITOS FUNDAMENTAIS:
+> RF-001: Atingido com sucesso;
+> RF-002: Atingido - Embora o calendário possua interatividade, o dev responsável não implementou uma interação de salvar os horarios e datas.
+> RF-003: Não atingida - O membro responsável desistiu da disciplina e não nos informou.
+> RF-004: Atingida parcialmente - Tendo em vista a RF-003, a possibilidade de cancelar a inscrição não foi implementada, mas é possível apagar o post/evento do Feed.
+___
+
+> RNF-001: Atingido com sucesso;
+> RNF-002: Não atingida;
+> RNF-003: Atingida;
+> RNF-004: Não atingida;
+> RNF-005: Não atingida.
+
+> Embora inúmeros requisitos iniciais não tenham sido atingidos, devido a diversos problemas, a organização inicial da
+> plataforma está estruturada, necessitando apenas de implementações que condizem com o proposto originalmente.
+> Todo o sistema de Login, Cadastro, Feed, Avaliação de Evento, Headers, Footers e criação de post estão funcionando, sendo alguns
+> outros precisando de manutenção, como o calendário e outras avaliações envolvendo o usario. De mais grave, acreditamos que
+> faltou a tela de usuário completa, embora cada um possua um modal que pode ser visto do feed ao ser clicado no post.
 
 ## Plano de Testes
 
 ......  COLOQUE AQUI O SEU TEXTO ......
 
-> Enumere quais cenários de testes foram selecionados para teste. Neste
-> tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo
-> de usuários que foi escolhido para participar do teste e as
-> ferramentas utilizadas.
-> 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
+> Inúmeros testes envolvendo o sistema de Login e Cadastro foram realizados. Embora básicos, sua funcionalidade era
+> necessária para que as implementações do Feed e da Avaliação de Usuário funcionassem, pois estas precisavam puxar
+> as informações de algum lugar. No Feed, testes envolvendo a experiencia do usuário, caminhos interativos, flows de clicks
+> e informações registradas permitiram que a tela tivesse uma excelente usabilidade. Para além disso, a avaliação do usário
+> permitiu que as informações expostas nas duas anteriores confirmassem o funcinamento e gerando um fluxo interativo
+> interessante para o usuario, mesmo que os eventos e o registro de monitoria não estivessem funcionando como esperado.
 
-## Ferramentas de Testes (Opcional)
-
-......  COLOQUE AQUI O SEU TEXTO ......
-
-> Comente sobre as ferramentas de testes utilizadas.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
 
 ## Registros de Testes
 
-......  COLOQUE AQUI O SEU TEXTO ......
 
-> Discorra sobre os resultados do teste. Ressaltando pontos fortes e
-> fracos identificados na solução. Comente como o grupo pretende atacar
-> esses pontos nas próximas iterações. Apresente as falhas detectadas e
-> as melhorias geradas a partir dos resultados obtidos nos testes.
+> No geral, todos os testes decorreram da comunição com o JSON SERVER e as informações advindas (ou não) dele. Para isso
+> foi necessária a constante atualização e adaptação do mesmo para que o Feed e a Avaliação do Usuário pudessem ser feita.
 
 
 # Referências
 
 ......  COLOQUE AQUI O SEU TEXTO ......
 
-> Inclua todas as referências (livros, artigos, sites, etc) utilizados
-> no desenvolvimento do trabalho.
-> 
-> **Links Úteis**:
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
-> - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
+> https://developer.mozilla.org/pt-BR/docs/Learn/HTML
+> https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
+> https://developer.mozilla.org/pt-BR/docs/Learn
+> https://replit.com/@rommelpuc/JSONServer
+> https://pucminas.instructure.com/courses/159943/files/9526743?module_item_id=3672764
+> https://pucminas.instructure.com/courses/156127/assignments/749039?module_item_id=3772281
+> https://pucminas.instructure.com/courses/156127/pages/dom-slash-ajax-obtendo-os-dados-de-um-jsonserver?module_item_id=3760301
