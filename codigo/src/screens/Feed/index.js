@@ -194,3 +194,10 @@ document.addEventListener('click', function(event) {
     window.location.href = `../Calendario/index.html`;
   }
 });
+
+document.addEventListener('click', function(event) {
+
+  if (event.target.classList.contains('detalhesUser')) {
+    window.location.href = `../Usuario/index.html`;
+  }
+});

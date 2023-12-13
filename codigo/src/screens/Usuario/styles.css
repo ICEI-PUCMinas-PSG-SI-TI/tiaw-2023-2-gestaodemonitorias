@@ -1,0 +1,94 @@
+:root {
+    --primary-color: #2c3e50; /* Azul escuro para a cor principal */
+    --secondary-color: #3498db; /* Azul mais claro para destaque */
+    --success-color: #27ae60; /* Verde para sucesso */
+    --danger-color: #e74c3c; /* Vermelho para perigo */
+    --warning-color: #f39c12; /* Amarelo para alertas */
+    --info-color: #2980b9; /* Azul médio para informações */
+    --light-color: #ecf0f1; /* Cinza claro para fundo */
+    --dark-color: #34495e; /* Cinza escuro para textos mais escuros */
+    --background-color: #ecf0f1; /* Cor de fundo da página */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+}
+
+/* .navbarclass {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 15px;
+} */
+
+.navbar-brand img {
+    max-height: 40px;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 15px;
+}
+
+.card-body {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.card-footer {
+    color: var(--primary-color);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.card {
+    width: 70%; 
+    max-width: 600px; 
+    margin: 0 auto; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+}
+
+.list-group {
+    width: 100%; 
+}
+
+.list-group-item {
+    background-color: var(--secondary-color);
+    border: none;
+}
+
+.list-group-item strong {
+    color: rgb(5, 5, 5);
+}
+
+.card {
+    width: 100%; 
+    max-width: 600px; 
+    height: 70%;
+    margin: 0 auto; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+    background-color: var(--secondary-color); 
+    text-align: center;
+}
+
+.list-group {
+    width: 100%; 
+}
+
+.list-group-item {
+    border: none;
+}
+
+.list-group-item strong {
+    color: white;
+}
