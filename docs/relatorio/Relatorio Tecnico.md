@@ -334,7 +334,8 @@ RNF-002	Capacidade de atribuir monitores a disciplinas ou grupos de estudo	BAIXA
 RNF-003	Botão de inscrição visível em cada monitoria	ALTA
 RNF-004	Confirmação de inscrição com lembrete por e-mail ou notificação push	MÉDIA
 RNF-005	•Relatórios que mostrem métricas como número de inscrições, avaliações e participações em monitorias	BAIXA
->
+
+
 > No geral, pensando no REQUISITOS FUNDAMENTAIS:
 > RF-001: Atingido com sucesso;
 > RF-002: Atingido - Embora o calendário possua interatividade, o dev responsável não implementou uma interação de salvar os horarios e datas.
@@ -352,11 +353,10 @@ ___
 > plataforma está estruturada, necessitando apenas de implementações que condizem com o proposto originalmente.
 > Todo o sistema de Login, Cadastro, Feed, Avaliação de Evento, Headers, Footers e criação de post estão funcionando, sendo alguns
 > outros precisando de manutenção, como o calendário e outras avaliações envolvendo o usario. De mais grave, acreditamos que
-> faltou a tela de usuário completa, embora cada um possua um modal que pode ser visto do feed ao ser clicado no post.
+> faltou a tela de usuário completa, embora um possua um modal que pode ser visto do feed ao ser clicado no post.
 
 ## Plano de Testes
 
-......  COLOQUE AQUI O SEU TEXTO ......
 
 > Inúmeros testes envolvendo o sistema de Login e Cadastro foram realizados. Embora básicos, sua funcionalidade era
 > necessária para que as implementações do Feed e da Avaliação de Usuário funcionassem, pois estas precisavam puxar
@@ -374,8 +374,6 @@ ___
 
 
 # Referências
-
-......  COLOQUE AQUI O SEU TEXTO ......
 
 > https://developer.mozilla.org/pt-BR/docs/Learn/HTML
 > https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
