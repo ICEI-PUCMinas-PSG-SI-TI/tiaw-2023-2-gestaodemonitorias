@@ -200,6 +200,45 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > do aplicativo, atendendo os requisitos funcionais esperados.
 
 
+VERSÕES FINAIS:
+TELA DE LOGIN
+![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw-2023-2-gestaodemonitorias/assets/74263483/ccacf334-9cd9-4741-b056-d939e315ba95)
+
+CONFIRMAÇÃO DO LOGIN
+![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw-2023-2-gestaodemonitorias/assets/74263483/d9328c7d-339d-49d9-a41a-8400aa681bc7)
+
+TELA FEED
+![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw-2023-2-gestaodemonitorias/assets/74263483/3ac82920-b5fb-4821-ac82-71e9bd4b88ba)
+
+AVALIAÇÃO DO EVENTO/MONITORIA
+![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw-2023-2-gestaodemonitorias/assets/74263483/148433fe-26d0-4b1c-8f21-8dd770a8fc4f)
+
+PERFIL MONITOR
+![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw-2023-2-gestaodemonitorias/assets/74263483/247bb5d1-6b88-46ba-9041-01ce0782672a)
+
+PAGINA ADMIN
+![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw-2023-2-gestaodemonitorias/assets/74263483/3dc0a1a1-1fde-4f91-a920-9da09789c92a)
+
+PAGINA DO USUARIO
+![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw-2023-2-gestaodemonitorias/assets/74263483/ecd5e29a-9413-4916-a7cc-430deb07bd4e)
+
+INSCREVA-SE
+![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw-2023-2-gestaodemonitorias/assets/74263483/54fe3f77-7c3b-479a-8c31-78b9c675d3cd)
+
+TELA DE AGENDAR EVENTO
+![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw-2023-2-gestaodemonitorias/assets/74263483/9ba4974f-4dae-4a5b-998b-18f6287ad71f)
+
+TELA DE AVALIAÇÃO DO USUARIO
+![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw-2023-2-gestaodemonitorias/assets/74263483/92d12153-02ac-4936-984f-d2d8ff86f0c7)
+
+SERVER JSON 1 - RECEBIMENTO DE LOGIN/USUARIOS E AFINS
+![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw-2023-2-gestaodemonitorias/assets/74263483/3f103395-5a20-423b-b4ab-297c5177ea25)
+
+SERVER JSON 2 - ENVIO DE AVALIAÇÕES E ARMAZENAMENTO DE EVENTOS
+![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw-2023-2-gestaodemonitorias/assets/74263483/bf588363-17f2-4a4e-9f58-2c5b32f4e404)
+
+
+
 ## User Flow
 
 ![image](https://github.com/ICEI-PUCMinas-PSG-SI-TI/tiaw-2023-2-gestaodemonitorias/assets/145771766/337fc37b-f36b-4f01-bdca-d391e297604a)
@@ -272,11 +311,6 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 > - `bugfix`: uma funcionalidade encontra-se com problemas
 > - `enhancement`: uma funcionalidade precisa ser melhorada
 > - `feature`: uma nova funcionalidade precisa ser introduzida
->
-> **Links Úteis**:
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
-> - [5 Git Workflows & Branching Strategy to deliver better code](https://zepel.io/blog/5-git-workflows-to-improve-development/)
 >
 > **Exemplo - GitHub Feature Branch Workflow**:
 >
