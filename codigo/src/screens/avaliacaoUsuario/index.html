@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação do Usuário</title>
+    <style>
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: rgb(102, 183, 226); 
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        h1 {
+            color: #333; 
+            margin-top: 20px;
+        }
+
+        p {
+            color: #666;
+        }
+
+        
+        .rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            font-size: 24px;
+        }
+
+        .star {
+            color: #f8d866; 
+            cursor: pointer;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .star:hover {
+            color: #ffb100; 
+        }
+
+        
+        #comment, #userName {
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff; 
+            color: #333;
+        }
+
+        
+        button {
+            background-color: #2c7be5; 
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #1f5ca9; 
+        }
+
+        .confirmation-message {
+            display: none;
+            color: green;
+        }
+
+        .help-section {
+            margin-top: 50px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: left;
+            background-color: #fff;
+            color: #333;
+            border-radius: 5px;
+        }
+
+        .help-section h2 {
+            color: #2e2e2e;
+        }
+
+        .help-section p {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        
+        .comments-section {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .comment-item {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #fff;
+        }
+
+        
+        .star-rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .star-input {
+            display: none;
+        }
+
+        .star-label {
+            font-size: 30px;
+            color: #f8d866;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .star-input:checked + .star-label {
+            color: #ffb100; 
+        }
+
+        
+        @media (max-width: 768px) {
+            
+            .rating, #comment, #userName, button, .star-rating {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Avaliação do Usuário</h1>
+    <p>O que você achou da sua experiência conosco?
+    Por favor, avalie o nosso serviço:</p>
+
+    <div class="rating">
+        <span class="star" onclick="setRating(1)">★</span>
+        <span class="star" onclick="setRating(2)">★</span>
+        <span class="star" onclick="setRating(3)">★</span>
+        <span class="star" onclick="setRating(4)">★</span>
+        <span class="star" onclick="setRating(5)">★</span>
+    </div>
+
+   
+    <p>Sua avaliação: <span id="rating">0</span></p>
+
+    <input type="text" id="userName" placeholder="Seu Nome">
+
+    <textarea id="comment" placeholder="Adicione um comentário..."></textarea><br>
+
+    <button onclick="submitRating()">Enviar Avaliação</button>
+
+    <p class="confirmation-message" id="confirmationMessage">Enviado com sucesso!</p>
+
+    <div class="comments-section">
+        <h2>Comentários:</h2>
+        <div id="commentList"></div>
+    </div>
+
+    <div class="help-section">
+        <h2>Tela de Ajuda para Alunos</h2>
+        <p>Bem-vindo à nossa plataforma de ajuda! Aqui estão alguns recursos que você pode explorar:</p>
+        <p>Encontre artigos úteis, assista a tutoriais em vídeo e confira as perguntas frequentes (FAQ) para obter mais informações.
+        Visite nossa <a href="https://www.pucminas.br/PucVirtual/Paginas/Faq.aspx" target="_blank">Site</a> para mais informações.
+    </div>
+
+    <script>
+        let userRating = 0;
+
+        function setRating(rating) {
+            userRating = rating;
+            document.getElementById("rating").textContent = rating;
+        }
+
+        function submitRating() {
+            const rating = userRating;
+            const userName = document.getElementById("userName").value; // Obtém o nome do usuário
+            const comment = document.getElementById("comment").value;
+
+            // Validação básica se o nome do usuário e o comentário estão preenchidos
+            if (!userName || !comment) {
+                alert("Por favor, preencha seu nome e seu comentário antes de enviar.");
+                return;
+            }
+
+            const data = {
+                nome: userName,
+                comentario: comment,
+                avaliacao: rating
+            };
+
+            const jsonData = JSON.stringify(data);
+            console.log(jsonData);
+
+            // Exibir mensagem de confirmação
+            const confirmationMessage = document.getElementById("confirmationMessage");
+            confirmationMessage.style.display = "block";
+
+            // Adicionar o comentário à lista
+            const commentList = document.getElementById("commentList");
+            const newComment = document.createElement("div");
+            newComment.classList.add("comment-item");
+            newComment.innerHTML = `<strong>${userName}</strong>: ${comment} - Avaliação: ${rating}`;
+            commentList.appendChild(newComment);
+
+            // Ocultar a mensagem após 4 segundos
+            setTimeout(function() {
+                confirmationMessage.style.display = "none";
+            }, 4000);
+
+            // Limpar campos após enviar
+            document.getElementById("userName").value = "";
+            document.getElementById("comment").value = "";
+            userRating = 0;
+            document.getElementById("rating").textContent = "0";
+        }
+    </script>
+</body>
+</html>
