@@ -120,10 +120,11 @@ main {
   padding-right: 80px;
   padding-left: 80px;
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
   background-color: var(--light-color);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
 }
 
 .profile-display {
@@ -286,12 +287,7 @@ main {
 }
 
 .deletePost {
-  color: var(--danger-color);
-  font-size: 1.2rem;
-  position: absolute;
-  right: 0;
-  top: 0;
-  cursor: pointer;
+  display: none;
 }
 
 .list-group-item {
@@ -363,6 +359,27 @@ main {
   margin-top: 50px;
   margin-bottom: 50px;
   text-align: center;
+}
+
+.avaliarContainer {
+  margin: 50px;
+}
+
+.avaliar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  background-color: var(--light-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.avaliar:hover {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  text-decoration: none;
 }
 
 /* Media Queries */

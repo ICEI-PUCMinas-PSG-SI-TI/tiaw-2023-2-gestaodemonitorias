@@ -2,6 +2,7 @@ import { PostFeed } from '../../components/post.js';
 
 document.addEventListener('DOMContentLoaded', function() {
   localStorage.clear();
+
   const urlParams = new URLSearchParams(window.location.search);
   const serializedMonitor = urlParams.get('monitor');
 
